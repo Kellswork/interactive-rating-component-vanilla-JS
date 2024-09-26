@@ -1,0 +1,273 @@
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+  font-family: "Overpass Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Overpass-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Overpass Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Overpass-Bold.ttf");
+}
+
+:root {
+  /* Colors */
+  /* Primary  */
+
+  /*  Neutral */
+  /* 
+- 
+*/
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --orange: hsl(25, 97%, 53%);
+
+  /* Font Size */
+  --title: 1.5rem;
+  --body: 0.875rem;
+}
+
+.attribution {
+  color: var(--light-grey);
+  font-size: var(--body);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-family: "Overpass Bold", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+}
+
+.feedback-main-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.feedback-container {
+  background: linear-gradient(to bottom, #232a34 0%, #181e27 100%);
+  width: 90%;
+  border-radius: 15px;
+  padding: 24px;
+  max-width: 25.8rem;
+}
+
+.feedback__icon-container {
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+}
+
+.feedback__text-container h1,
+.feedback-submitted h1 {
+  font-family: "Overpass Bold", sans-serif;
+  color: var(--white);
+  font-size: var(--title);
+}
+.feedback__text-container h1 {
+  padding-top: 16px;
+}
+.feedback-submitted h1 {
+  padding-top: 24px;
+}
+
+.feedback__text-container p,
+.feedback-submitted__appreciation {
+  font-family: "Overpass Regular", sans-serif;
+  color: var(--light-grey);
+  font-size: var(--body);
+}
+
+.feedback__text-container p {
+  padding-top: 16px;
+}
+
+.feedback-submitted__appreciation {
+  padding-top: 10px;
+}
+
+.feedback__ratings-list {
+  margin-top: 24px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback__ratings-item button {
+  background-color: var(--dark-blue);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  font-family: "Overpass Bold", sans-serif;
+  color: var(--light-grey);
+  font-size: var(--body);
+  cursor: pointer;
+}
+
+.feedback__ratings-item button:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+.feedback__btn {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 22.5px;
+  color: var(--very-dark-blue);
+  background-color: var(--orange);
+  font-size: var(--body);
+  text-transform: uppercase;
+  font-family: "Overpass Bold", sans-serif;
+  letter-spacing: 0.12em;
+  border: none;
+}
+.feedback__btn:hover {
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.feedback__btn-container {
+  margin-top: 24px;
+}
+
+.feedback-submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-submitted p {
+  text-align: center;
+}
+.feedback-submitted h1 {
+  text-align: center;
+}
+
+.feedback-submitted__score {
+  color: var(--orange);
+  font-size: var(--body);
+  font-family: "Overpass Regular", sans-serif;
+  margin-top: 24px;
+}
+.feedback-submitted__score span {
+  padding: 5px 12px;
+  background-color: var(--dark-blue);
+  border-radius: 22.5px;
+}
+
+.feedback-submitted {
+  display: none;
+}
+
+.feedback__ratings-item .selected {
+  background-color: var(--orange);
+  color: var(--dark-blue);
+}

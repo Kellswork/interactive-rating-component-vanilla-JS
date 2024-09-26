@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Interactive rating component</title>
+
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <main class="feedback-main-container">
+    <div class="feedback-container">
+      <div class="feedback-select-rating">
+        <div class="feedback__icon-container">
+          <img src="images/icon-star.svg" alt="" />
+        </div>
+        <div class="feedback__text-container">
+          <h1>How did we do? </h1>
+          <p>Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+          </p>
+        </div>
+
+        <ul class="feedback__ratings-list">
+          <li class="feedback__ratings-item"><button role="button">1</button></li>
+          <li class="feedback__ratings-item"><button role="button">2</button></li>
+          <li class="feedback__ratings-item"><button role="button">3</button></li>
+          <li class="feedback__ratings-item"><button role="button">4</button></li>
+          <li class="feedback__ratings-item"><button role="button">5</button></li>
+        </ul>
+
+        <div class="feedback__btn-container">
+          <button class="feedback__btn" role="button">Submit</button>
+        </div>
+        <!-- Rating state end -->
+      </div>
+
+      <div class="feedback-submitted">
+        <div class="feedback-submitted__img-container">
+          <img src="images/illustration-thank-you.svg" alt="" />
+        </div>
+
+        <div class="feedback-submitted__text-container">
+          <p class="feedback-submitted__score"><span>You Selected 4 out of 5</span></p>
+          <h1>
+            Thank you!
+          </h1>
+          <p class="feedback-submitted__appreciation">
+            We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+            touch!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Thank you state start -->
+
+
+  <!-- Thank you state end -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"/>
+</body>
+
+</html>
